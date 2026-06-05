@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/Todo-App/assets/favicon-32x32-DQjEQYWa.png" type="image/x-icon">
+  <title>Todo app</title>
+  <script type="module" crossorigin src="/Todo-App/assets/index-CAUDDJG4.js"></script>
+  <link rel="stylesheet" crossorigin href="/Todo-App/assets/index-Dwrpfv1F.css">
+</head>
+
+<body class="relative bg-main min-h-screen font-josefin lg:flex lg:flex-col lg:items-center">
+  <span class="absolute left-[50%] translate-x-[-50%] bottom-10 font-normal text-gray-600 whitespace-nowrap -z-10">Drag
+    and drop the recorder list</span>
+  <img id="bg-img" class="absolute -z-10 top-0 w-full h-55">
+  <header class="px-7 py-10 flex items-center justify-between lg:w-125">
+    <h2 class="text-4xl text-white font-bold">T O D O</h2>
+    <button type="button" class="cursor-pointer" id="toggle-theme-btn">
+      <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='26'%20height='26'%3e%3cpath%20fill='%23FFF'%20fill-rule='evenodd'%20d='M13%2021a1%201%200%20011%201v3a1%201%200%2011-2%200v-3a1%201%200%20011-1zm-5.657-2.343a1%201%200%20010%201.414l-2.121%202.121a1%201%200%2001-1.414-1.414l2.12-2.121a1%201%200%20011.415%200zm12.728%200l2.121%202.121a1%201%200%2001-1.414%201.414l-2.121-2.12a1%201%200%20011.414-1.415zM13%208a5%205%200%20110%2010%205%205%200%20010-10zm12%204a1%201%200%20110%202h-3a1%201%200%20110-2h3zM4%2012a1%201%200%20110%202H1a1%201%200%20110-2h3zm18.192-8.192a1%201%200%20010%201.414l-2.12%202.121a1%201%200%2001-1.415-1.414l2.121-2.121a1%201%200%20011.414%200zm-16.97%200l2.121%202.12A1%201%200%20015.93%207.344L3.808%205.222a1%201%200%20011.414-1.414zM13%200a1%201%200%20011%201v3a1%201%200%2011-2%200V1a1%201%200%20011-1z'/%3e%3c/svg%3e" alt="sun icon">
+    </button>
+  </header>
+  <main class="px-7 lg:w-140">
+    <section class="mb-5">
+      <label class="relative">
+        <div
+          class="absolute inset-y-0 my-auto left-3 w-7 h-7 rounded-full border border-gray-600 flex items-center justify-center">
+        </div>
+        <input type="text" placeholder="Create a new todo..." id="todo-input"
+          class="bg-primrary w-full h-13 xl:h-16 rounded-lg focus:outline-none pl-14 placeholder:font-normal placeholder:text-gray-600 font-normal text-gray-600">
+      </label>
+    </section>
+    <section class="bg-primrary rounded-lg h-max w-full mb-5">
+      <div id="todos" class="flex flex-col mb-3"></div>
+      <div class="flex items-center justify-between px-6 pb-2 relative">
+        <p class="font-normal text-gray-600 text-lg" id="no-of-todos">0 items left</p>
+        <div class="w-full px-4 bg-primrary flex items-center py-4 rounded-lg justify-center gap-x-4 absolute -bottom-20 left-0 right-0 lg:static lg:gap-x-1 lg:px-0 lg:py-0 lg:w-max">
+          <label class="font-bold text-gray-600 text-lg has-checked:text-blue-500 cursor-pointer hover:text-purple-100">
+            <input type="radio" name="type" value="all" class="appearance-none" checked>
+            All
+          </label>
+          <label class="font-bold text-gray-600 text-lg has-checked:text-blue-500
+      cursor-pointer hover:text-purple-100">
+            <input type="radio" name="type" value="active" class="appearance-none">
+            Active
+          </label>
+          <label class="font-bold text-gray-600 text-lg has-checked:text-blue-500
+      cursor-pointer hover:text-purple-100">
+            <input type="radio" name="type" value="completed" class="appearance-none">
+            Completed
+          </label>
+        </div>
+        <button type="button" id="delete-all-completed"
+          class="font-normal text-gray-600 text-lg cursor-pointer hover:text-purple-300">Clear Completed</button>
+      </div>
+    </section>
+
+  </main>
+</body>
+
+</html>

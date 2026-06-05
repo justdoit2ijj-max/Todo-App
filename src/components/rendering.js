@@ -1,4 +1,6 @@
 import { state } from "../state";
+import iconCheck from "../../images/icon-check.svg";
+import iconCross from "../../images/icon-cross.svg";
 
 export function render() {
     const noOfTodos = document.getElementById('no-of-todos')
@@ -24,7 +26,7 @@ export function render() {
             ? 'bg-linear-to-r from-[hsl(192,100%,67%)] to-[hsl(280,87%,65%)]'
             : 'bg-primrary';
         const checkIcon = completed
-            ? '<img src="/Todo-App/images/icon-check.svg" alt="check icon">'
+            ? `<img src="${iconCheck}" alt="check icon">`
             : '';
 
         const div = document.createElement('div')
@@ -41,7 +43,7 @@ export function render() {
                 <p class="font-josefin font-normal ${taskClasses}">${list[i].task}</p>
             </div>
             <button type="button" class="del-btn cursor-pointer" data-id="${list[i].id}">
-                <img src="/Todo-App/images/icon-cross.svg" alt="cross icon">
+                <img src="${iconCross}" alt="cross icon">
             </button>`
         todos.appendChild(div);
     }
